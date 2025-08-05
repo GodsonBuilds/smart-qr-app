@@ -1,0 +1,1 @@
+npm install expo-camera expo-barcode-scanner expo-image-picker @react-native-clipboard/clipboard react-native-qrcode-svg react-native-toast-message @react-native-async-storage/async-storage expo-linking expo-haptics

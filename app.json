@@ -1,0 +1,58 @@
+{
+  "expo": {
+    "name": "SmartQR",
+    "slug": "smartqr",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#5b21b6"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Cette application a besoin d'accéder à la caméra pour scanner les codes QR.",
+        "NSPhotoLibraryUsageDescription": "Cette application a besoin d'accéder à vos photos pour décoder les codes QR depuis vos images."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#5b21b6"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Autoriser SmartQR à utiliser votre caméra pour scanner les codes QR."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Autoriser SmartQR à accéder à vos photos pour décoder les codes QR."
+        }
+      ]
+    ],
+    "scheme": "smartqr",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
