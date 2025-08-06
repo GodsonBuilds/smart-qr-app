@@ -3,9 +3,10 @@ module.exports = {
   content: [
     "./app/**/*.{js,jsx,ts,tsx}",
     "./components/**/*.{js,jsx,ts,tsx}",
-    "./src/**/*.{js,jsx,ts,tsx}"
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   presets: [require("nativewind/preset")], 
+  darkMode: 'class', // Enable dark mode support
   theme: {
     extend: {
       colors: {
