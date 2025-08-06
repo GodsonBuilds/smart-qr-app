@@ -2,11 +2,11 @@ import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import Toast from 'react-native-toast-message';
 import { useFrameworkReady } from '@/hooks/useFrameworkReady';
-import { ThemeProvider, useTheme } from '@/contexts/ThemeContext';
+import { AppProvider, useAppContext } from '@/contexts/AppContext'; 
 import './global.css';
 
 function ThemedLayout() {
-  const { isDark } = useTheme();
+  const { isDark } = useAppContext(); 
   
   return (
     <>
@@ -32,8 +32,8 @@ export default function RootLayout() {
   useFrameworkReady();
 
   return (
-    <ThemeProvider>
+    <AppProvider> {/* Changé de ThemeProvider à AppProvider */}
       <ThemedLayout />
-    </ThemeProvider>
+    </AppProvider>
   );
 }

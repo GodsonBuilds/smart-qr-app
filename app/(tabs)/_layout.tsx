@@ -1,11 +1,11 @@
+import { useAppContext } from '@/contexts/AppContext';
 import { Tabs } from 'expo-router';
-import { Platform} from 'react-native';
-import { QrCode, History, CirclePlus as PlusCircle, Settings } from 'lucide-react-native';
-import { useTheme } from '@/contexts/ThemeContext';
+import { History, CirclePlus as PlusCircle, QrCode, Settings } from 'lucide-react-native';
+import { Platform } from 'react-native';
 
 
 export default function TabLayout() {
-  const { isDark } = useTheme();
+  const { isDark } = useAppContext();
  
 
   // Couleurs adaptatives basées sur le thème

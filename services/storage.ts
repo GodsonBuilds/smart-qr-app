@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { HistoryItem, AppSettings } from '../types/index';
+import { HistoryItem, AppSettings } from '../types';
 
 const HISTORY_KEY = '@smartqr_history';
 const SETTINGS_KEY = '@smartqr_settings';
@@ -70,16 +70,18 @@ export const getSettings = async (): Promise<AppSettings> => {
     }
     // Paramètres par défaut
     return {
-      darkMode: false,
+      
       saveHistory: true,
-      language: 'fr'
+      language: 'fr',
+        themePreference: 'system' // Préférence de thème par défaut
     };
   } catch (error) {
     console.error('Erreur lors de la récupération des paramètres:', error);
     return {
-      darkMode: false,
+     
       saveHistory: true,
-      language: 'fr'
+      language: 'fr',
+      themePreference: 'system' // Préférence de thème par défaut
     };
   }
 };

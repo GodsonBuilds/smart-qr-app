@@ -12,9 +12,9 @@ export interface QRResult {
 }
 
 export interface AppSettings {
-  darkMode: boolean;
   saveHistory: boolean;
   language: 'fr' | 'en';
+  themePreference: 'system' | 'light' | 'dark';
 }
 
 export interface QRGenerationOptions {
